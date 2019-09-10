@@ -5,7 +5,7 @@ const router = express.Router();
 //@desc   Get Logged in user
 //@access Private
 router.get('/', (req, res) => {
-  res.send('Logged in user');
+  res.send('Get Logged in user');
 });
 
 //@route  POST api/auth
