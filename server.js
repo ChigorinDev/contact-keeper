@@ -1,10 +1,13 @@
 const express = require('express');
-const connectDB = require('./config/db');
+const connectDB = require('./config/db.js');
 
 const app = express();
 
 // Connect Database
 connectDB();
+
+//It used to be bodyParser in middlewrare but Express has it by itself now
+app.use(express.json({ extended: false }));
 
 //add route
 app.get('/', (req, res) =>
