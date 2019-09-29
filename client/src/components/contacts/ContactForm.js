@@ -15,7 +15,7 @@ const ContactForm = () => {
 
   const onChange = e => {
     setContact({ ...contact, [e.target.name]: e.target.value });
-    console.log({ [e.target.name]: e.target.value });
+    console.log({ ...contact, [e.target.name]: e.target.value });
   };
 
   const onSubmit = e => {
@@ -59,13 +59,15 @@ const ContactForm = () => {
         name='type'
         value='personal'
         checked={type === 'personal'}
+        onChange={onChange}
       />
       Personal{''}
       <input
         type='radio'
         name='type'
         value='professional'
-        // checked={type === 'professional'}
+        checked={type === 'professional'}
+        onChange={onChange}
       />
       Professional{''}
       <div>
